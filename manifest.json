@@ -1,0 +1,23 @@
+{
+	"name": "Net Neutrality Simulator",
+	"description": "Simulate the effects of web browsing without Net Neutrality",
+	"version": "1.0",
+	"homepage_url": "http://www.afflitto.tech",
+	"browser_action": {
+		"default_title": "Net Neutrality Simulator",
+		"default_icon": "icon.png"
+		},
+	"permissions": [
+		"tabs",
+		"<all_urls>"
+	],
+	"background": {
+		"scripts": [ "background.js" ],
+		"persistent": true
+	},
+	"content_scripts": [{
+		"matches": [ "<all_urls>" ],
+		"js": [ "jquery-3.2.1.min.js" ]
+	}],
+	"manifest_version": 2
+}
